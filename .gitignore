@@ -1,0 +1,60 @@
+# Prerequisites & Dependency files
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.hex
+*.bin
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.dwo
+
+# Build directories
+build/
+bin/
+out/
+.cache/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*~
+*.bak
+
+# OS generated
+.DS_Store
+Thumbs.db
