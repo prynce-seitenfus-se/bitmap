@@ -65,7 +65,7 @@ bool bitmap_init(Bitmap* bm, BitmapWord* storage, size_t bit_count);
  * @param bit_index 0-based index of the bit to set.
  * @return true if set successfully, false if bm is NULL or bit_index is out of range.
  */
-static inline bool bitmap_set_bit(Bitmap* bm, size_t bit_index)
+static inline __attribute__((no_instrument_function)) bool bitmap_set_bit(Bitmap* bm, size_t bit_index)
 {
     if ((bm == NULL) || (bit_index >= bm->bit_count)) {
         return false;
@@ -84,7 +84,7 @@ static inline bool bitmap_set_bit(Bitmap* bm, size_t bit_index)
  * @param bit_index 0-based index of the bit to clear.
  * @return true if cleared successfully, false if bm is NULL or bit_index is out of range.
  */
-static inline bool bitmap_clear_bit(Bitmap* bm, size_t bit_index)
+static inline __attribute__((no_instrument_function)) bool bitmap_clear_bit(Bitmap* bm, size_t bit_index)
 {
     if ((bm == NULL) || (bit_index >= bm->bit_count)) {
         return false;
@@ -103,7 +103,7 @@ static inline bool bitmap_clear_bit(Bitmap* bm, size_t bit_index)
  * @param bit_index 0-based index of the bit to toggle.
  * @return true if toggled successfully, false if bm is NULL or bit_index is out of range.
  */
-static inline bool bitmap_toggle_bit(Bitmap* bm, size_t bit_index)
+static inline __attribute__((no_instrument_function)) bool bitmap_toggle_bit(Bitmap* bm, size_t bit_index)
 {
     if ((bm == NULL) || (bit_index >= bm->bit_count)) {
         return false;
@@ -122,7 +122,7 @@ static inline bool bitmap_toggle_bit(Bitmap* bm, size_t bit_index)
  * @param bit_index 0-based index of the bit to inspect.
  * @return true if bit is set (1), false if bit is 0 or parameters are invalid.
  */
-static inline bool bitmap_test_bit(const Bitmap* bm, size_t bit_index)
+static inline __attribute__((no_instrument_function)) bool bitmap_test_bit(const Bitmap* bm, size_t bit_index)
 {
     if ((bm == NULL) || (bit_index >= bm->bit_count)) {
         return false;
@@ -137,7 +137,7 @@ static inline bool bitmap_test_bit(const Bitmap* bm, size_t bit_index)
  * @param bm Pointer to the Bitmap instance.
  * @return Total manageable bit count, or 0 if bm is NULL.
  */
-static inline size_t bitmap_bit_count(const Bitmap* bm)
+static inline __attribute__((no_instrument_function)) size_t bitmap_bit_count(const Bitmap* bm)
 {
     if (bm == NULL) {
         return 0U;
